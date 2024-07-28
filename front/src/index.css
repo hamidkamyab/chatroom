@@ -1,0 +1,109 @@
+:root {
+    --light: #ffffff;
+    --light-2: #d4d3d3;
+    --light-3: #ebebeb;
+    --dark-1: #353b48;
+    --dark-2: #2f3640;
+    --light-blue: #00a8ff;
+    --light-blue-2: #2c97cc;
+    --green-1: #009432;
+    --green-2: #1f753c;
+    --dark-blue: #192a56;
+}
+
+@font-face {
+    font-family: BYekan;
+    src: url('../public/font/iranyekan_medium.eot') format('eot'), url('../public/font/iranyekan_medium.ttf') format('ttf'), url('../public/font/iranyekan_medium.woff') format('woff');
+}
+
+* {
+    font-family: 'BYekan', Arial, monospace;
+    font-size: 14px;
+    color: var(--dark-1)
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.App {
+    /* background-color: var(--light-2); */
+    background: linear-gradient(160deg, #ccc 5%, #666 95%);
+    min-height: 100vh;
+}
+
+.login {
+    flex: content;
+}
+
+.form-box {
+    box-shadow: 0 0 4px 1px #aaa;
+    background-color: var(--light);
+}
+
+input {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+select option {
+    font-weight: bold;
+}
+
+.header,
+.footer {
+    background-color: var(--light-3);
+}
+
+.header small,
+.header small * {
+    color: var(--light-blue);
+    font-size: 12px;
+}
+
+.header h5,
+.header h5 * {
+    color: var(--dark-blue);
+}
+
+.header-img {
+    width: 64px;
+}
+
+.send-btn {
+    background: none;
+    border: none;
+    width: 84px;
+    background-color: var(--light-blue);
+    height: 100%;
+    border-radius: 5px 0 0 5px;
+    transition: .2s ease-in;
+    -o-transition: .2s ease-in;
+    -webkit-transition: .2s ease-in;
+    -ms-transition: .2s ease-in;
+}
+
+.send-btn * {
+    color: var(--light)
+}
+
+.send-btn:hover {
+    background-color: var(--light-blue-2);
+    transition: .2s ease-in;
+    -o-transition: .2s ease-in;
+    -webkit-transition: .2s ease-in;
+    -ms-transition: .2s ease-in;
+}
+
+.footer>textarea {
+    resize: none;
+    box-shadow: none !important;
+    border-radius: 0 5px 5px 0 !important;
+}
