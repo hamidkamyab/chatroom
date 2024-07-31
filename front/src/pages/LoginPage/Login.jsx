@@ -1,5 +1,6 @@
 ﻿import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { v4 as uuidv4 } from 'uuid';
 
 function Login() {
   const [name,setName] = useState(null)
@@ -25,8 +26,9 @@ function Login() {
   const submit = (e) => {
     e.preventDefault()
     const validation = handleValidation({name,gender})
+    const token = uuidv4();
     if(validation != 'error'){
-      localStorage.setItem('info',JSON.stringify({name,gender}))
+      localStorage.setItem('info',JSON.stringify({name,gender,token}))
       navigate('/chatroom')
     }
   }

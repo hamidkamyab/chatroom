@@ -4,7 +4,7 @@ import friend from '../asset/img/friend.svg'
 
 function Header({userInfo}) {
     return (
-        <div className="header px-3 py-1 d-flex align-items-center justify-content-between">
+        <div className="header px-3 py-1 d-flex align-items-center justify-content-between border-bottom border-dark">
             <div className="right">
                 <h5 className='d-flex align-items-center gap-2'>
                     <BS.BsChatFill size={16} /> چت روم سوکت :)

@@ -26,7 +26,12 @@ const io = new Server(server, {
 const mySocket = io.of('/socket')
 
 mySocket.on('connection', (socket) => {
-    console.log('Connect New User');
+
+    socket.on('sendMessage', (data) => {
+        const now = new Date()
+        mySocket.emit('newMsg', {...data, date: now.toLocaleString('en-GB', { timeZone: 'Asia/Tehran' }) })
+    })
+
     socket.on('disconnect', (socket) => {
         console.log('disconnect New User');
     })

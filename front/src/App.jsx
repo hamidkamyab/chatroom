@@ -6,7 +6,7 @@ import AuthRoute from './components/AuthRoute';
 function App() {
   return (
     <BrowserRouter>
-    <div className="App vh-100">
+    <div className="App d-flex justify-content-center vh-100">
       <Routes>
         <Route element={<ProtectedRoute />}>
           <Route path='*' element={<Chatroom />} />
